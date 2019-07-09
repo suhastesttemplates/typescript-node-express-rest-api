@@ -1,0 +1,9 @@
+export namespace AppConfig {
+    
+    const db_server: string = 'arc-nonpro.ct7xhplld31m.us-west-2.rds.amazonaws.com';
+    const db_user: string = 'arc_owner';
+    const db_password: string = '14LetterWord!!';
+    const db_database: string = 'arc_dev';
+
+    
+}

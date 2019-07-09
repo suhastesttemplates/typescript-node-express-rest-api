@@ -1,0 +1,15 @@
+import { GenericDao } from "../dal/dao/GenericDao";
+
+export class BusinessHandler {
+
+    public  handleRequest = function(apiUrl:string,req:any,res:any){
+        const dao :GenericDao =  new GenericDao();
+        let sql_getRules_api:string;
+
+        if(apiUrl === '/rules'){
+            sql_getRules_api = "select * from [dbo].[ORDER_ONREVIEW_RULES]";
+        }
+
+        dao.executeQuery (res, sql_getRules_api);
+    }
+}

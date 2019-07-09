@@ -1,0 +1,15 @@
+import express = require ("express");
+import { BusinessHandler } from "./business/businessHandler";
+
+const app = express();
+app.set("port",3000);
+
+
+const businessHandler:BusinessHandler = new BusinessHandler();
+
+app.get('/rules', (req,res) =>{
+	console.log("called this method:app.get(/api/rules )");
+	businessHandler.handleRequest("/rules",req,res);
+})
+
+export default app;
